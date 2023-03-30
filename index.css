@@ -6,8 +6,7 @@
 }
 
 body {
-  font-family: Arial, monospace;
-  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #0d3c55;
   color: #fff;
@@ -29,7 +28,7 @@ p {
 
 h2 {
   display: flex;
-  padding-top:5%;
+  padding-top: 30px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -37,7 +36,7 @@ h2 {
 }
 
 h2 span {
-  font-family: Arial, cursive;
+  font-family: 'Poppins', sans-serif;
   position: relative;
   display: inline-block;
   color: yellow;
@@ -80,16 +79,13 @@ nav {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #fff;
   margin-left: 20px;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,8 +93,9 @@ nav ul {
 }
 
 nav li {
-  margin-right: 20px;
+  margin: 0px;
   text-align: center;
+  padding: 0px;
 }
 
 nav a {
@@ -108,28 +105,28 @@ nav a {
   font-weight: bold;
   padding: 1em 1em;
   border: 3px;
-  border-radius: 100px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }                 
 
 nav a:hover {
   
-  color: #FFD700;
-  transition: color 0.3s ease-in-out;
+  color: #ffcc00;
+  box-shadow: none;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-
 main {
-  padding: 2em;
-  padding-top: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
+  margin: 2em;
+  margin-top: 145px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 #Home {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 5.5%;
+  margin-bottom: 95px;
 }
 
 .about-greeting {
@@ -151,11 +148,18 @@ main {
   border: 5px solid black;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   margin-top: 10%;
+  transition: transform 1s ease-in-out;
+}
+
+.about-picture img:hover{
+
+  transform: rotate(-20deg);
+  transition: transform 0.5s ease-in-out;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 23%;
+  margin-top: 60px;
   padding: 0.5rem 1rem;
   background: #0072b1;
   border-radius: 2rem;
@@ -163,12 +167,13 @@ main {
   font-size: 1rem;
   color: #ff1361;
   letter-spacing: .1rem;
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .btn:hover {
   box-shadow: none;
+  text-decoration:underline;
 }
 
 section {
@@ -178,54 +183,48 @@ section {
 .hello {
   padding: 0;
   margin: 0;
-  font-size: 20%;
   box-sizing: border-box;
-}
-
-.hello{
   position: relative;
 }
+
 .hello span {
   position: relative;
   display: inline-block;
-  font-size: 60px;
-  color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #FFD700;
   text-transform: uppercase;
-  animation: flip 2s infinite;
+  animation: flip 3s infinite;
   animation-delay: calc(.2s * var(--i))
 }
+
 @keyframes flip {
   0%,80% {
     transform: rotateY(360deg) 
   }
 }
-.animate-charcter
-{
-    text-transform: uppercase;
-    background-image: linear-gradient(
-      -225deg,
-     /*#231557 0%,*/
-     #0d3c55 29% 29%,
-     #ff1361 67%,
-     #fff800 100%
-  );
-    background-size: auto auto;
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 4s linear infinite;
-    display: inline-block;
-    font-size: 60px;
-    text-align: center;
-    font-family: Arial;
+
+#typed {
+  font-size: 1.5rem;
+  height: 150px;
 }
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
+.animated-text {
+  animation: slideIn 2s ease-in-out forwards;
+  font-size: 3rem;
+  font-weight: bold;
+  color:#ff1361;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -259,6 +258,8 @@ h2 {
 .project:hover {
   box-shadow: 0 2px 5px rgba(255, 253, 253, 0.5);
   transition: 0.4s;
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 .project h3 {
@@ -396,14 +397,26 @@ button[type="submit"]:hover {
 .social-media a {
   display: inline-block;
   margin: 0 10px;
+  background-color:#0d3c55;
+}
+
+.social-media a:hover {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .social-media a i {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  border: 8px;
+  padding: 8px;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .social-media a:hover i {
-  transition: color 0.2s ease;
+  background-color: #fff;
+  box-shadow: none;
+  transition: 0.4s;
 }
 
 .social-media a i.fa-github {
