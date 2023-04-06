@@ -367,6 +367,8 @@ form {
 
 textarea#message {
   height: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 input[type="text"],
@@ -447,4 +449,22 @@ button[type="submit"]:hover {
 
 .social-media a i.fa-linkedin {
   color: #0072b1; 
+}
+
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+#scroll-to-top i {
+  font-size: 2.2em;
+  color: #333;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
